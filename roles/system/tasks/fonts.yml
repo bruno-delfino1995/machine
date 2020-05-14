@@ -1,10 +1,16 @@
 - name: Install pacman fonts
-  become: yes
-  pacman:
-    name:
-      - ttf-dejavu
-      - ttf-fira-mono
-      - noto-fonts
-      - noto-fonts-emoji
-      - noto-fonts-extra
-      - adobe-source-code-pro-fonts
+  block:
+  - name: pacman
+    become: yes
+    pacman:
+        name:
+        - ttf-dejavu
+        - ttf-fira-mono
+        - noto-fonts
+        - noto-fonts-emoji
+        - noto-fonts-extra
+        - adobe-source-code-pro-fonts
+  - name: yay
+    yay: name={{item}}
+    loop:
+      - lexend-fonts-git
