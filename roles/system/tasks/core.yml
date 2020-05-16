@@ -14,4 +14,18 @@
       - man-db
       - man-pages
       - moreutils
-      - mlocate
+
+- name: Install shell tools
+  block:
+    - yay: name={{ item }}
+      loop:
+        - direnv
+        - apache-tools
+        - tmuxinator
+    - become: yes
+      pacman:
+        name:
+          - fd
+          - ripgrep
+          - tldr
+          - tmux
