@@ -1,0 +1,2 @@
+- name: Install system monitor
+  yay: name=gnome-system-monitor
