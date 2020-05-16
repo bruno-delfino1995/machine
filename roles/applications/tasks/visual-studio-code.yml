@@ -1,2 +1,0 @@
-- name: Install VSCode
-  yay: name=visual-studio-code-bin
