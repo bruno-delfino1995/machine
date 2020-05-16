@@ -18,3 +18,6 @@
 - name: Install VPN tools
   become: yes
   pacman: name=openvpn,networkmanager-openvpn
+
+- name: Install networking helpers
+  yay: name=wait-for-it
