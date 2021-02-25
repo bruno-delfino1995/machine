@@ -2,6 +2,5 @@
 - include: look-and-feel.yml
 - include: terminal.yml
 - include: app-launcher.yml
-- include: notifications.yml
 - include: file-manager.yml
 - include: monitoring.yml

@@ -1,3 +1,0 @@
-- name: Install dunst for notification daemon
-  become: yes
-  pacman: name=dunst

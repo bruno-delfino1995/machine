@@ -10,14 +10,7 @@
 
 - name: Install WM
   become: yes
-  pacman: name=bspwm
-
-- name: Install hotkey daemon
-  become: yes
-  pacman: name=sxhkd
-
-- name: Install status bar
-  yay: name=polybar
+  pacman: name=awesome
 
 - name: Install screen utilities
   block:
@@ -32,11 +25,10 @@
     - yay: name=caffeine-ng
 
 - name: Install locking tools
-  become: yes
-  pacman:
-    name:
-      - xss-lock
-      - i3lock-color
+  block:
+    - become: yes
+      pacman: name=xss-lock
+    - yay: name=i3lock-color
 
 - name: Install clipboard tools
   become: yes
@@ -44,7 +36,6 @@
     name:
       - xsel
       - xclip
-      - autocutsel
 
 - name: Install window management tools
   block:
