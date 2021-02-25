@@ -1,5 +1,4 @@
 - include: pacman.yml
-- include: network.yml
 - include: core.yml
 - include: config.yml
 - include: yubikey.yml

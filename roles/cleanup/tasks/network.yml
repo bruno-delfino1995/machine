@@ -1,8 +1,0 @@
-- name: Remove base network tools
-  become: yes
-  pacman: name=netctl,dhcpcd state=absent
-
-- name: Disable systemd-resolved
-  become: yes
-  systemd: name=systemd-resolved enabled=no state=stopped
-

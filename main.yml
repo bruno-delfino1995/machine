@@ -1,8 +1,8 @@
 - hosts: localhost
   connection: local
   roles:
+    - network
     - system
     - desktop
     - programming
     - applications
-    - cleanup
