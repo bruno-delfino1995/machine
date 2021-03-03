@@ -1,10 +1,7 @@
-- name: Install PCMan
+- name: Install graphical file manager
   become: yes
   pacman: name=pcmanfm
 
-- name: Install ranger
+- name: Install console file manager
   become: yes
-  pacman:
-    name:
-      - ranger
-      - w3m
+  pacman: name=ranger
