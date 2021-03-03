@@ -27,3 +27,7 @@
         contents.stdout.find('Reflector') == -1
         or
         (ansible_date_time.epoch|int - stats.stat.mtime) > (7 * 60 * 60 * 24)
+
+- name: Enable automatic update of mirrors
+  become: yes
+  systemd: name=reflector.timer enabled=yes state=started
