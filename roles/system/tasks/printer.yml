@@ -15,4 +15,4 @@
     - name: install
       pacman: name=cups
     - name: enable
-      systemd: name=org.cups.cupsd enabled=yes state=started
+      systemd: name=cups.socket enabled=yes state=started
