@@ -1,8 +1,13 @@
 - hosts: localhost
   connection: local
   roles:
-    - network
-    - system
-    - desktop
-    - programming
-    - applications
+    - role: network
+      tags: network
+    - role: system
+      tags: system
+    - role: desktop
+      tags: desktop
+    - role: programming
+      tags: programming
+    - role: applications
+      tags: applications
