@@ -5,21 +5,3 @@
 - name: Install STOW
   become: yes
   pacman: name=stow
-
-- name: Install dotfiles
-  block:
-    - name: clone repository
-      git:
-        repo: https://github.com/bruno-delfino1995/dotfiles.git
-        dest: ~/.dotfiles
-        version: master
-        update: yes
-    - name: change remote url
-      shell: git remote set-url origin git@github.com:bruno-delfino1995/dotfiles.git
-      args:
-        chdir: ~/.dotfiles
-    - name: install
-      shell: ~/.dotfiles/install
-      # TODO: fix colorscheme installation to be more seamless
-      when: false
-

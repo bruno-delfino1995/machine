@@ -1,19 +1,9 @@
+- name: Install VSCode
+  yay: name=visual-studio-code-bin
+
 - name: Install Emacs
   become: yes
   pacman: name=emacs
-
-- name: Install DoomEmacs
-  block:
-    - name: clone repository
-      git:
-        repo: https://github.com/hlissner/doom-emacs.git
-        dest: ~/.emacs.d
-    - name: change remote url
-      shell: git remote set-url origin git@github.com:hlissner/doom-emacs.git
-      args:
-        chdir: ~/.emacs.d
-    - name: install
-      shell: ~/.emacs.d/bin/doom install
 
 - name: Install editor tools
   become: yes
