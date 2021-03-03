@@ -16,3 +16,7 @@
       - alsa-utils
       - pulseaudio
       - pulseaudio-alsa
+
+- name: Install PlayerCTL
+  become: yes
+  pacman: name=playerctl

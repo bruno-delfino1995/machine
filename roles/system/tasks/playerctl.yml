@@ -1,3 +1,0 @@
-- name: Install PlayerCTL
-  become: yes
-  pacman: name=playerctl

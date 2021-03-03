@@ -7,5 +7,4 @@
 - include: bluetooth.yml
 - include: editor.yml
 - include: fonts.yml
-- include: playerctl.yml
 - include: printer.yml
