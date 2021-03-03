@@ -4,7 +4,7 @@
     - name: install
       pacman:
         name:
-          - pcsclite
+          - opensc
           - ccid
     - name: enable
       systemd: name=pcscd enabled=yes state=started
