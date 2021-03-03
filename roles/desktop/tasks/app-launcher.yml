@@ -2,11 +2,5 @@
   become: yes
   pacman: name=rofi
 
-- name: Install Rofi Extensions
-  yay: name={{ item }}
-  loop:
-    - roficlip
-    - rofi-calc
-
 - name: Install XDG Autostarter
   yay: name=dapper

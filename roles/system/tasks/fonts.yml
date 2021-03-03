@@ -14,3 +14,4 @@
     yay: name={{item}}
     loop:
       - lexend-fonts-git
+      - ttf-juliamono
