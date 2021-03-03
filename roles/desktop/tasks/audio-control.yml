@@ -1,0 +1,3 @@
+- name: Install audio control
+  become: yes
+  pacman: name=pavucontrol
