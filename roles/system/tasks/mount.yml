@@ -1,0 +1,3 @@
+- name: Install mounting helper
+  become: yes
+  pacman: name=udisks2
