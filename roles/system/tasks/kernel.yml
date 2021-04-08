@@ -1,0 +1,5 @@
+- name: Install restore tool
+  yay: timeshift
+
+- name: Install kernel manager
+  yay: kmon

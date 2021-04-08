@@ -1,5 +1,7 @@
 - include: pacman.yml
+- include: debug.yml
 - include: core.yml
+- include: kernel.yml
 - include: config.yml
 - include: mount.yml
 - include: yubikey.yml

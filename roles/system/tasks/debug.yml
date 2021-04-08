@@ -1,0 +1,3 @@
+- name: Install tracer
+  become: yes
+  pacman: name=strace
