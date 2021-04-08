@@ -1,4 +1,4 @@
-- name: Install pacman fonts
+- name: Install fonts
   block:
   - name: pacman
     become: yes
@@ -15,3 +15,7 @@
     loop:
       - lexend-fonts-git
       - ttf-juliamono
+
+- name: Install font conversion tools
+  become: yes
+  pacman: name=woff2

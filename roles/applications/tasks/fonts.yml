@@ -1,3 +1,7 @@
 - name: Install font inspector
   become: yes
   pacman: name=gucharmap
+
+- name: Install font editor
+  become: yes
+  pacman: name=fontforge
