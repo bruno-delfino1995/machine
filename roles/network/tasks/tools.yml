@@ -1,0 +1,7 @@
+- name: Install generic tools
+  become: yes
+  pacman:
+    name:
+      - bind-tools
+      - ngrep
+      - ldns

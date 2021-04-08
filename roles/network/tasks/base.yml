@@ -1,0 +1,7 @@
+- name: Copy configuration files
+  become: yes
+  copy: src=etc/ dest=/etc/
+
+- name: Enable systemd-networkd
+  become: yes
+  systemd: name=systemd-networkd enabled=yes state=started

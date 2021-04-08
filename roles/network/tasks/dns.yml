@@ -1,0 +1,14 @@
+- name: Enable systemd-resolved
+  become: yes
+  systemd: name=systemd-resolved enabled=yes state=started
+
+- name: Link resolved stub file
+  become: yes
+  file:
+    src: /run/systemd/resolve/stub-resolv.conf
+    path: /etc/resolv.conf
+    state: link
+
+- name: Install resolvconf replacement
+  become: yes
+  pacman: name=systemd-resolvconf

@@ -1,0 +1,7 @@
+- name: Enable systemd-timesyncd
+  become: yes
+  systemd: name=systemd-timesyncd enabled=yes state=started
+
+- name: Enable NTP
+  become: yes
+  shell: timedatectl set-ntp true
