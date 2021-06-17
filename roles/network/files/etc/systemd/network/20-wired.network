@@ -1,8 +1,0 @@
-[Match]
-Name=enp3s0
-
-[Network]
-DHCP=yes
-
-[DHCP]
-RouteMetric=256

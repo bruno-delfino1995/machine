@@ -2,6 +2,14 @@
   become: yes
   copy: src=etc/ dest=/etc/
 
-- name: Enable systemd-networkd
+- name: Install NetworkManager
   become: yes
-  systemd: name=systemd-networkd enabled=yes state=started
+  pacman: name=networkmanager
+
+- name: Enable NetworkManager
+  become: yes
+  systemd: name=NetworkManager enabled=yes state=started
+
+- name: Install wireless daemon
+  become: yes
+  pacman: name=iwd

@@ -1,0 +1,11 @@
+- name: Install OpenVPN
+  become: yes
+  pacman: name=openvpn
+
+- name: Install NetworkManager VPN Helper
+  become: yes
+  pacman: name=networkmanager-openvpn
+
+- name: Change wireless tool for NetworkManager
+  yay: name=networkmanager-iwd-overlay
+

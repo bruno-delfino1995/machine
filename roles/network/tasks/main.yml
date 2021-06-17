@@ -1,4 +1,4 @@
 - include: base.yml
-- include: dns.yml
 - include: ntp.yml
 - include: tools.yml
+- include: vpn.yml
