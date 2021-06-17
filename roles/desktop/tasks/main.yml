@@ -1,10 +1,1 @@
-- include: window-manager.yml
-- include: look-and-feel.yml
-- include: terminal.yml
-- include: app-launcher.yml
-- include: file-manager.yml
-- include: image-viewer.yml
-- include: audio-control.yml
-- include: pdf-reader.yml
-- include: video-player.yml
-- include: monitoring.yml
+- include: base.yml

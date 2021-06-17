@@ -20,7 +20,6 @@
     - yay: name={{ item }}
       loop:
         - direnv
-        - apache-tools
         - tmuxinator
     - become: yes
       pacman:

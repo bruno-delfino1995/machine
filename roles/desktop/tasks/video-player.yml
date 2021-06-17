@@ -1,3 +1,0 @@
-- name: Install video player
-  become: yes
-  pacman: name=mpv

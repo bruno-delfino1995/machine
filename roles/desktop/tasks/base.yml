@@ -1,0 +1,104 @@
+- name: Install Xorg and desktop tools
+  become: yes
+  pacman:
+    name:
+      - xorg-server
+      - xorg-xinit
+
+- name: Install Display Manager
+  become: yes
+  pacman: name=gdm
+
+- name: Enable Display Manager
+  become: yes
+  systemd: name=gdm enabled=yes
+
+- name: Install Desktop Environment
+  become: yes
+  pacman:
+    name:
+      - baobab
+      - cheese
+      - eog
+      - evince
+      - file-roller
+      - gedit
+      - gnome-backgrounds
+      - gnome-books
+      - gnome-boxes
+      - gnome-calculator
+      - gnome-calendar
+      - gnome-characters
+      - gnome-clocks
+      - gnome-color-manager
+      - gnome-control-center
+      - gnome-disk-utility
+      - gnome-documents
+      - gnome-font-viewer
+      - gnome-logs
+      - gnome-menus
+      - gnome-music
+      - gnome-photos
+      - gnome-remote-desktop
+      - gnome-screenshot
+      - gnome-session
+      - gnome-settings-daemon
+      - gnome-shell
+      - gnome-shell-extensions
+      - gnome-system-monitor
+      - gnome-terminal
+      - gnome-themes-extra
+      - gnome-user-docs
+      - gnome-user-share
+      - gnome-video-effects
+      - grilo-plugins
+      - gvfs
+      - gvfs-afc
+      - gvfs-goa
+      - gvfs-google
+      - gvfs-gphoto2
+      - gvfs-mtp
+      - gvfs-nfs
+      - gvfs-smb
+      - mutter
+      - nautilus
+      - orca
+      - rygel
+      - simple-scan
+      - sushi
+      - totem
+      - tracker
+      - tracker3
+      - tracker3-miners
+      - tracker-miners
+      - vino
+      - xdg-user-dirs-gtk
+      - yelp
+
+- name: Install extra desktop tools
+  become: yes
+  pacman:
+    name:
+      - accerciser
+      - dconf-editor
+      - devhelp
+      - ghex
+      - glade
+      - gnome-builder
+      - gnome-code-assistance
+      - gnome-connections
+      - gnome-devel-docs
+      - gnome-multi-writer
+      - gnome-nettool
+      - gnome-recipes
+      - gnome-sound-recorder
+      - gnome-tweaks
+      - gnome-usage
+      - sysprof
+
+- name: Install clipboard tools
+  become: yes
+  pacman:
+    name:
+      - xsel
+      - xclip

@@ -1,7 +1,0 @@
-- name: Install graphical file manager
-  become: yes
-  pacman: name=pcmanfm
-
-- name: Install console file manager
-  become: yes
-  pacman: name=ranger

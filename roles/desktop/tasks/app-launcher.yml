@@ -1,6 +1,0 @@
-- name: Install Rofi
-  become: yes
-  pacman: name=rofi
-
-- name: Install XDG Autostarter
-  yay: name=dex

@@ -4,7 +4,3 @@
 - name: Install Emacs
   become: yes
   pacman: name=emacs
-
-- name: Install editor tools
-  become: yes
-  pacman: name=editorconfig-core-c
